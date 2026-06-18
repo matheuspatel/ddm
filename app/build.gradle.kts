@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myfirstapplication"
+    namespace = "com.example.Contador"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myfirstapplication"
+        applicationId = "com.example.Contador"
         minSdk = 31
         targetSdk = 35
         versionCode = 1
