@@ -7,67 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/n1"
-        android:layout_width="79dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#5D1C1C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.264"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
-
-    <EditText
-        android:id="@+id/n2"
-        android:layout_width="79dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="number"
-        android:textColor="#5D1C1C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
-
     <TextView
-        android:id="@+id/result"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
-        android:text="Resultado: "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
-
-    <TextView
-        android:layout_width="175dp"
-        android:layout_height="55dp"
-        android:text="Insira os números nos campos pro sorteio"
+        android:layout_width="284dp"
+        android:layout_height="96dp"
+        android:text="MEU ÁLBUM DE FIGURINHAS"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <ImageView
+        android:id="@+id/imgVi"
+        android:layout_width="293dp"
+        android:layout_height="413dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.498"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/sorteio"
-        android:layout_width="205dp"
-        android:layout_height="55dp"
-        android:text="Clique pra sortear"
+        android:id="@+id/btProx"
+        android:layout_width="155dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#7C0404"
+        android:text="Avançar"
+        android:textSize="27sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintVertical_bias="0.892" />
+
+    <Button
+        android:id="@+id/btBack"
+        android:layout_width="155dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#7C0404"
+        android:text="Voltar"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.892" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

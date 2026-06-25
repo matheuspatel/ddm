@@ -1,21 +1,17 @@
 package com.example.Contador;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-//pra funcionar o random aleatorio:
-import java.util.Random;
 
     public class MainActivity extends AppCompatActivity {
 
-        Button sorteio;
-        TextView result;
-        EditText n1;
-        EditText n2;
+        Button bProx, bBack;
+        ImageView imgV;
+        int imagens [] = new int []{R.drawable.mia,R.drawable.messi,R.drawable.vini,R.drawable.bozo,R.drawable.davi,R.drawable.kratos,R.drawable.dorao};
+
+        int posicao=0;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -23,35 +19,33 @@ import java.util.Random;
             EdgeToEdge.enable(this);
             setContentView(R.layout.activity_main);
 
-            sorteio = findViewById(R.id.sorteio);
-            result = findViewById(R.id.result);
-            n1 = findViewById(R.id.n1);
-            n2 = findViewById(R.id.n2);
+            bProx = findViewById(R.id.btProx);
+            bBack = findViewById(R.id.btBack);
+            imgV = findViewById(R.id.imgVi);
 
-            sorteio.setOnClickListener(this::fazSort);
-        }
+            bProx.setOnClickListener( v -> {
+                posicao++;
+                if (posicao>= imagens.length) {
+                    posicao=0;
+                }
+                imgV.setImageResource(imagens[posicao]);
+        });
 
-        private void fazSort(View view) {
-            if (n1.getText().toString().isEmpty() ||
-                    n2.getText().toString().isEmpty()) {
+            bBack.setOnClickListener( v -> {
+                posicao--;
+                if (posicao < 0) {
+                    posicao = imagens.length - 1;
+                }
+                imgV.setImageResource(imagens[posicao]);
 
-                new AlertDialog.Builder(this)
-                        .setMessage("Digite 2 números para o sorteio")
-                        .show();
-
-                return;
-            }
-
-                int nu1 = Integer.parseInt(n1.getText().toString());
-                int nu2 = Integer.parseInt(n2.getText().toString());
-
-                int res = new Random().nextInt((nu2 - nu1)+1)+nu1;
-                result.setText("O sorteio foi: " + res);
-
-             /* poderíamos usar o try e o : catch (Exception e) {
-                result.setText("ERRO");
-                isso pra verificar erros como se tentarem colocar letras, mas como nos testes ja tá puxando apenas numero, estamos usando o if pra verificar e usar o dialog
-*/
-            }
+            });
 
         }
+
+        @Override
+        protected void onResume() {
+            super.onResume();
+            posicao = 0;
+            imgV.setImageResource(imagens[posicao]);
+        }
+    }
