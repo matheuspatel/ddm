@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main"
+    tools:context=".ActivityFormularioConstraint">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome"
+        android:padding="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/endereco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/endereco"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome"/>
+
+    <EditText
+        android:id="@+id/cidade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cidade"
+        android:drawableStart="@android:drawable/ic_menu_mylocation"
+        android:drawablePadding="8dp"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endereco"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:drawableStart="@android:drawable/ic_dialog_email"
+        android:padding="12dp"
+        android:gravity="start|center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cidade"/>
+
+    <EditText
+        android:id="@+id/telefone"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone"
+        android:drawablePadding="8dp"
+        android:drawableStart="@android:drawable/ic_menu_call"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"/>
+
+    <Spinner
+        android:id="@+id/estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/telefone"/>
+
+    <EditText
+        android:id="@+id/cep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/cep"
+        android:padding="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/estado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/estado"/>
+
+    <ImageButton
+        android:id="@+id/bAniversario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="12dp"
+        android:src="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cep"/>
+
+    <EditText
+        android:id="@+id/aniversario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/aniversario"
+        android:layout_marginEnd="16dp"
+        android:padding="12dp"
+        app:layout_constraintStart_toEndOf="@id/bAniversario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bAniversario"/>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

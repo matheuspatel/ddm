@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">Contador</string>
-    <string name="button">Button</string>
+    <string name="app_name">View Groups</string>
+    <string name="titulo">VIEW GROUPS</string>
+    <string name="tela">Selecione a tela desejada:</string>
+    <string name="bProg">PROGRAMÁTICA</string>
+    <string name="bForm">FORMULÁRIO</string>
+    <string name="nome">Nome</string>
+    <string name="endereco">Endereço</string>
+    <string name="cidade">Cidade</string>
+    <string name="email">E-mail</string>
+    <string name="telefone">Telefone</string>
+    <string name="cep">CEP</string>
+    <string name="aniversario">Aniversário</string>
 </resources>
